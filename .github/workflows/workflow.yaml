@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - "main"
+      - **
 
 env:
   AZURE_FUNCTIONAPP_NAME: "githubactions-xxx-xxx" # For Oppgave 8: Sett inn navn på din egen Azure function app
@@ -21,7 +21,8 @@ jobs:
           node-version: 20
 
       # Oppgave 4: Installere dependencies
-      # - name: npm install
+      - name: npm install
+        run: npm ci
 
       # Oppgave 5: Kjører testene i prosjektet. Feiler jobben dersom tester feiler.
       #- name: Run tests
