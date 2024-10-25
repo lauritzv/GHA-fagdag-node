@@ -31,12 +31,10 @@ jobs:
       # Oppgave 6: List ut npm dependencies med sårbarheter.
       - name: Audit packages
         run: npm audit --audit-level moderate
-        depends-on: npm install
 
       # Oppgave 7: Kjør linting
       - name: Run lint (eslint)
         run: npm run lint
-        depends-on: npm install
 
       # Oppgave 8: Deploy step, sett navnet på din function app, i env.AZURE_FUNCTIONAPP_NAME
       # Og legg publish profile i en Github secret med navn AZURE_FUNCTIONAPP_PUBLISH_PROFILE
